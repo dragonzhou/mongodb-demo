@@ -42,9 +42,10 @@ public class GeoMongodbSpringBootDemoApplicationTests {
 		//NearQuery nq = NearQuery.near(point.getX(),point.getY(), Metrics.KILOMETERS).maxDistance(new Double(200));
 		NearQuery nq = NearQuery.near(point.getX(),point.getY(), Metrics.KILOMETERS).maxDistance(new Double(400));
 		GeoResults<GeoLocation> empGeoResults = template.geoNear(nq, GeoLocation.class);
+		System.out.println("geo 查询");
 		if (empGeoResults != null) {
 			for (GeoResult<GeoLocation> e : empGeoResults) {
-				System.out.println("\ne.toString() ================ " + e.toString());
+				System.out.println("结果 ================ " + e.getContent().getName());
 			}
 		}
 
