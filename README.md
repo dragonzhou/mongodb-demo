@@ -1,1 +1,2 @@
-this is mongodb geo demo zhoujinlong
+# GeoMongodbSpringBootDemo
+geojson mongodb spring boot 坐标查询
