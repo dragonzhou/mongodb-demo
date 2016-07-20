@@ -18,6 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @SpringApplicationConfiguration(classes = GeoMongodbSpringBootDemoApplication.class)
 public class GeoMongodbSpringBootDemoApplicationTests {
 
+
 	@Autowired
 	private MongoTemplate template;
 
@@ -27,8 +28,11 @@ public class GeoMongodbSpringBootDemoApplicationTests {
 	@Test
 	public void initData() {
 		//初始化数据 相差 400公里
-		geoLocationDao.save(new GeoLocation("鹤山市",new Point(112.99206,22.740501)));
-		geoLocationDao.save(new GeoLocation("桂林市",new Point(110.295787,25.288211)));
+		geoLocationDao.save(new GeoLocation("海口",new Point(112.99206,22.740501)));
+		geoLocationDao.save(new GeoLocation("三亚",new Point(110.295787,25.288211)));
+		geoLocationDao.save(new GeoLocation("西安",new Point(120.99206,22.740501)));
+		geoLocationDao.save(new GeoLocation("厦门",new Point(116.295787,25.288211)));
+
 	}
 
 	@Test
@@ -50,5 +54,6 @@ public class GeoMongodbSpringBootDemoApplicationTests {
 		}
 
 	}
+
 
 }
